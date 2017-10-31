@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<transactions>
+  <transaction>
+    <type>outgoing</type>
+    <day>23</day>
+    <month>11</month>
+    <year>2013</year>
+    <description>outgoingDescription2</description>
+    <amount>-100,00</amount>
+    <category>outgoingCategory2</category>
+  </transaction>
+  <transaction>
+    <type>outgoing</type>
+    <day>23</day>
+    <month>11</month>
+    <year>2013</year>
+    <description>outgoingDescription2</description>
+    <amount>-100,00</amount>
+    <category>outgoingCategory2</category>
+  </transaction>
+  <transaction>
+    <type>outgoing</type>
+    <day>23</day>
+    <month>12</month>
+    <year>2013</year>
+    <description>outgoingDescription2</description>
+    <amount>-100,00</amount>
+    <category>outgoingCategory2</category>
+  </transaction>
+  <transaction>
+    <type>outgoing</type>
+    <day>23</day>
+    <month>11</month>
+    <year>2013</year>
+    <description>outgoingDescription1</description>
+    <amount>-100,00</amount>
+    <category>outgoingCategory1</category>
+  </transaction>
+  <transaction>
+    <type>outgoing</type>
+    <day>23</day>
+    <month>11</month>
+    <year>2013</year>
+    <description />
+    <amount>-100,00</amount>
+    <category />
+  </transaction>
+  <transaction>
+    <type>incoming</type>
+    <day>23</day>
+    <month>11</month>
+    <year>2013</year>
+    <description>incomingDescription2</description>
+    <amount>100,00</amount>
+    <category>incomingCategory2</category>
+  </transaction>
+  <transaction>
+    <type>incoming</type>
+    <day>23</day>
+    <month>11</month>
+    <year>2013</year>
+    <description>incomingDescription2</description>
+    <amount>100,00</amount>
+    <category>incomingCategory2</category>
+  </transaction>
+  <transaction>
+    <type>incoming</type>
+    <day>23</day>
+    <month>11</month>
+    <year>2013</year>
+    <description>incomingDescription1</description>
+    <amount>100,00</amount>
+    <category>incomingCategory1</category>
+  </transaction>
+  <transaction>
+    <type>incoming</type>
+    <day>23</day>
+    <month>11</month>
+    <year>2013</year>
+    <description />
+    <amount>100,00</amount>
+    <category />
+  </transaction>
+</transactions>

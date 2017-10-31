@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Analyses" xml:space="preserve">
+    <value>Auswertungen</value>
+  </data>
+  <data name="AnalysesBalanceInfo" xml:space="preserve">
+    <value>Saldo im {0} {1}: {2} €</value>
+  </data>
+  <data name="AnalysesDataError" xml:space="preserve">
+    <value>Keine Daten vorhanden!</value>
+  </data>
+  <data name="AnalysesIncomingInfo" xml:space="preserve">
+    <value>Einnahmen im {0} {1}: {2} €</value>
+  </data>
+  <data name="AnalysesOutgoingInfo" xml:space="preserve">
+    <value>Ausgaben im {0} {1}: {2} €</value>
+  </data>
+  <data name="AnalysesShowCurrency" xml:space="preserve">
+    <value>Angaben in €</value>
+  </data>
+  <data name="AnalysesShowPercent" xml:space="preserve">
+    <value>Angaben in %</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Haushaltsbuch</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="binocular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\binocular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="binocular_exclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\binocular-exclamation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="binocular_minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\binocular-minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonAdd" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="ButtonEdit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="ButtonSearch" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="chart_pie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chart-pie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>Dezember</value>
+  </data>
+  <data name="DeleteTransactionText" xml:space="preserve">
+    <value>Eintrag sicher löschen?</value>
+  </data>
+  <data name="exclamation_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exclamation-red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>Februar</value>
+  </data>
+  <data name="funnel_exclamation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\funnel-exclamation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeaderAmount" xml:space="preserve">
+    <value>Betrag in €</value>
+  </data>
+  <data name="HeaderBalance" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="HeaderCategory" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="HeaderDate" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="HeaderDescription" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Incomings" xml:space="preserve">
+    <value>Einnahmen</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>Januar</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>Juli</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>Juni</value>
+  </data>
+  <data name="LabelAmount" xml:space="preserve">
+    <value>Betrag:</value>
+  </data>
+  <data name="LabelAuthor" xml:space="preserve">
+    <value>von David Schneider</value>
+  </data>
+  <data name="LabelBalance" xml:space="preserve">
+    <value>Saldo:</value>
+  </data>
+  <data name="LabelCategory" xml:space="preserve">
+    <value>Kategorie:</value>
+  </data>
+  <data name="LabelCurrency" xml:space="preserve">
+    <value>€</value>
+  </data>
+  <data name="LabelDescription" xml:space="preserve">
+    <value>Beschreibung:</value>
+  </data>
+  <data name="LabelFilter" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="LabelIcons" xml:space="preserve">
+    <value>Icons:</value>
+  </data>
+  <data name="LabelMail" xml:space="preserve">
+    <value>E-Mail:</value>
+  </data>
+  <data name="LabelMonth" xml:space="preserve">
+    <value>Monat:</value>
+  </data>
+  <data name="LabelSearchTerm" xml:space="preserve">
+    <value>Suchbegriff:</value>
+  </data>
+  <data name="LabelYear" xml:space="preserve">
+    <value>Jahr:</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>März</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>Mai</value>
+  </data>
+  <data name="minus_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minus-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Monat</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>Oktober</value>
+  </data>
+  <data name="Outgoings" xml:space="preserve">
+    <value>Ausgaben</value>
+  </data>
+  <data name="pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RadioButtonIsIncoming" xml:space="preserve">
+    <value>Einnahme</value>
+  </data>
+  <data name="RadioButtonIsOutgoing" xml:space="preserve">
+    <value>Ausgabe</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Suche</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="tick_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToolTipDeleteSearch" xml:space="preserve">
+    <value>Suche löschen</value>
+  </data>
+  <data name="ToolTipErrorMessage" xml:space="preserve">
+    <value>Betrag hat ungültiges Format!</value>
+  </data>
+  <data name="ToolTipFilterVisible" xml:space="preserve">
+    <value>Filter ist aktiv!</value>
+  </data>
+  <data name="ToolTipSearchVisible" xml:space="preserve">
+    <value>Suche ist aktiv!</value>
+  </data>
+  <data name="ToolTipSuccessMessage" xml:space="preserve">
+    <value>Eintrag wurde gespeichert.</value>
+  </data>
+  <data name="TransactionAdd" xml:space="preserve">
+    <value>Eintrag hinzufügen</value>
+  </data>
+  <data name="TransactionDelete" xml:space="preserve">
+    <value>Eintrag löschen</value>
+  </data>
+  <data name="TransactionEdit" xml:space="preserve">
+    <value>Eintrag bearbeiten</value>
+  </data>
+  <data name="UnknownCategory" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Jahr</value>
+  </data>
+</root>

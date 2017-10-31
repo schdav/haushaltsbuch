@@ -1,0 +1,91 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart">
+    <Style x:Key="ChartStyle" TargetType="chart:PieChart">
+        <Setter Property="Height" Value="350" />
+        <Setter Property="Width" Value="500" />
+    </Style>
+    <!-- Individuelle Farben für Diagramm -->
+    <chart:ResourceDictionaryCollection x:Key="CustomColors">
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush1" Color="#FF6464" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush2" Color="#64FF64" />
+        </ResourceDictionary>
+
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush3" Color="#FFFF64" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush4" Color="#FFB4B4" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush5" Color="#FF64FF" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush6" Color="#B4FFB4" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush7" Color="#B4B4FF" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush8" Color="#B4B464" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush9" Color="#B464B4" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush10" Color="#64FFFF" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush11" Color="#64B4B4" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush12" Color="#6464FF" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush13" Color="#646464" />
+        </ResourceDictionary>
+
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush14" Color="#FF64B4" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush15" Color="#64FFB4" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush16" Color="#FFFFB4" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush17" Color="#FFB4FF" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush18" Color="#FFB464" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush19" Color="#B4FFFF" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush20" Color="#B4FF64" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush21" Color="#B4B4B4" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush22" Color="#B464FF" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush23" Color="#B46464" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush24" Color="#64B4FF" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush25" Color="#64B464" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="Brush26" Color="#6464B4" />
+        </ResourceDictionary>
+    </chart:ResourceDictionaryCollection>
+</ResourceDictionary>

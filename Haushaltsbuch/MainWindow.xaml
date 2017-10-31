@@ -1,0 +1,145 @@
+﻿<Window x:Class="Haushaltsbuch.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:objects="clr-namespace:Haushaltsbuch.Objects" xmlns:p="clr-namespace:Haushaltsbuch.Properties"
+        mc:Ignorable="d" Title="{x:Static p:Resources.ApplicationName}" SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/icon.ico" UseLayoutRounding="True"
+        d:DataContext="{d:DesignData MainWindowViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- Filter für Einträge -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,10,10,5">
+            <Label Content="{x:Static p:Resources.LabelMonth}" />
+            <ComboBox Width="100" Margin="0,0,5,0" ItemsSource="{Binding Months, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedValue="{Binding SelectedMonth, UpdateSourceTrigger=PropertyChanged}" Height="22" />
+            <Label Content="{x:Static p:Resources.LabelYear}" Margin="5,0,0,0" />
+            <ComboBox Width="100" Margin="0,0,5,0" ItemsSource="{Binding Years, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedValue="{Binding SelectedYear, UpdateSourceTrigger=PropertyChanged}" Height="22" />
+            <Label Content="{x:Static p:Resources.LabelFilter}" Margin="5,0,0,0" />
+            <ComboBox Width="100" ItemsSource="{Binding Categories, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedValue="{Binding SelectedCategory, UpdateSourceTrigger=PropertyChanged}" Height="22" />
+        </StackPanel>
+        <!-- Liste mit Einträgen -->
+        <DataGrid Grid.Row="1" Height="275" Width="500" Margin="10,5,10,5" CanUserReorderColumns="False"
+                  CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single"
+                  AutoGenerateColumns="False" IsReadOnly="True" GridLinesVisibility="None" RowHeaderWidth="0"
+                  UseLayoutRounding="False" ItemsSource="{Binding Transactions, UpdateSourceTrigger=PropertyChanged}"
+                  SelectedItem="{Binding SelectedTransaction, UpdateSourceTrigger=PropertyChanged}">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="SeparatorVisibility" Value="Collapsed" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding TransactionType}" Value="outgoing">
+                            <Setter Property="Background" Value="#FFB2B2" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding TransactionType}" Value="incoming">
+                            <Setter Property="Background" Value="#B2FFB2" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="BorderThickness" Value="0" />
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="Auto" Header="{x:Static p:Resources.HeaderDate}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding DateString}" Padding="5,0"
+                                       d:DataContext="{d:DesignInstance objects:Transaction}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="*" Header="{x:Static p:Resources.HeaderDescription}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Description}" TextTrimming="CharacterEllipsis" Padding="5,0"
+                                       d:DataContext="{d:DesignInstance objects:Transaction}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="Auto" Header="{x:Static p:Resources.HeaderAmount}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding AmountString}" Padding="5,0"
+                                       d:DataContext="{d:DesignInstance objects:Transaction}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="*" Header="{x:Static p:Resources.HeaderCategory}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Category}" TextTrimming="CharacterEllipsis" Padding="5,0"
+                                       d:DataContext="{d:DesignInstance objects:Transaction}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <!-- Berechnetes Saldo -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,5,10,5">
+            <Label Content="{x:Static p:Resources.LabelBalance}" />
+            <TextBox Width="150" IsReadOnly="True" Height="18"
+                     Text="{Binding Balance, UpdateSourceTrigger=PropertyChanged}" />
+            <Label Content="{x:Static p:Resources.LabelCurrency}" Margin="0,0,5,0" />
+            <Image Source="Resources\funnel-exclamation.png" Margin="5,0,5,0"
+                   ToolTip="{x:Static p:Resources.ToolTipFilterVisible}"
+                   Visibility="{Binding FilterImageVisibility, UpdateSourceTrigger=PropertyChanged}" />
+            <Image Source="Resources\binocular-exclamation.png" Margin="5,0,5,0"
+                   ToolTip="{x:Static p:Resources.ToolTipSearchVisible}"
+                   Visibility="{Binding SearchImageVisibility, UpdateSourceTrigger=PropertyChanged}" />
+            <Button Margin="5,0,0,0" Command="{Binding DeleteSearchCommand}"
+                    ToolTip="{x:Static p:Resources.ToolTipDeleteSearch}" VerticalAlignment="Center"
+                    Visibility="{Binding SearchButtonVisibility, UpdateSourceTrigger=PropertyChanged}">
+                <Image Source="Resources/binocular-minus.png" />
+            </Button>
+        </StackPanel>
+        <!-- Buttons für Funktionen -->
+        <Grid Grid.Row="3" Margin="10,15,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="0,0,5,0" ToolTip="{x:Static p:Resources.TransactionAdd}" IsDefault="True"
+                    Command="{Binding AddTransactionCommand}">
+                <Image Source="Resources/plus-circle.png" />
+            </Button>
+            <Button Grid.Column="1" Margin="5,0,5,0" ToolTip="{x:Static p:Resources.TransactionDelete}"
+                    Command="{Binding DeleteTransactionCommand}">
+                <Image Source="Resources/minus-circle.png" />
+            </Button>
+            <Button Grid.Column="2" Margin="5,0,5,0" ToolTip="{x:Static p:Resources.TransactionEdit}"
+                    Command="{Binding EditTransactionCommand}">
+                <Image Source="Resources/pencil.png" />
+            </Button>
+            <Button Grid.Column="3" Margin="5,0,5,0" ToolTip="{x:Static p:Resources.Analyses}"
+                    Command="{Binding ShowAnalysesCommand}">
+                <Image Source="Resources/chart-pie.png" />
+            </Button>
+            <Button Grid.Column="4" Margin="5,0,0,0" ToolTip="{x:Static p:Resources.Search}"
+                    Command="{Binding SearchCommand}">
+                <Image Source="Resources/binocular.png" />
+            </Button>
+            <Button Grid.Column="6" ToolTip="{x:Static p:Resources.Info}" Command="{Binding ShowInfoCommand}">
+                <Image Source="Resources/information.png" />
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

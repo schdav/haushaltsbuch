@@ -1,0 +1,96 @@
+﻿<Window x:Class="Haushaltsbuch.AnalysesWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" SizeToContent="WidthAndHeight" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner" Icon="Resources/icon.ico" UseLayoutRounding="True"
+        xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:Haushaltsbuch.Properties" mc:Ignorable="d" Title="{x:Static p:Resources.Analyses}"
+        d:DataContext="{d:DesignData haushaltsbuch:AnalysesWindowViewModel}">
+    <!-- Ressourcen für Fenster -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="AnalysesDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- Filter für Einträge -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,10,10,5">
+            <Label Content="{x:Static p:Resources.LabelMonth}" />
+            <ComboBox Width="100" Margin="0,0,5,0" ItemsSource="{Binding Months, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedValue="{Binding SelectedMonth, UpdateSourceTrigger=PropertyChanged}" Height="22" />
+            <Label Content="{x:Static p:Resources.LabelYear}" Margin="5,0,0,0" />
+            <ComboBox Width="100" ItemsSource="{Binding Years, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedValue="{Binding SelectedYear, UpdateSourceTrigger=PropertyChanged}" Height="22" />
+        </StackPanel>
+        <!-- Tabs mit Diagrammen -->
+        <TabControl Grid.Row="1" Margin="10,5">
+            <!-- Diagramm für Ausgaben -->
+            <TabItem Header="{x:Static p:Resources.Outgoings}">
+                <StackPanel Orientation="Vertical">
+                    <Label FontWeight="Bold" Content="{Binding OutgoingHeading, UpdateSourceTrigger=PropertyChanged}" />
+                    <chart:PieChart Background="Transparent" ChartTitleVisibility="Collapsed" FontSize="10"
+                                    Foreground="#000000" Palette="{StaticResource CustomColors}"
+                                    SelectedBrush="Transparent" Style="{StaticResource ChartStyle}"
+                                    ToolTipFormat="{}{0}: {1}">
+                        <chart:PieChart.Series>
+                            <chart:ChartSeries SeriesTitle="Outgoing" DisplayMember="Group" ValueMember="Quantity"
+                                               ItemsSource="{Binding OutgoingChartData, UpdateSourceTrigger=PropertyChanged}" />
+                        </chart:PieChart.Series>
+                    </chart:PieChart>
+                </StackPanel>
+            </TabItem>
+            <!-- Diagramm für Einnahmen -->
+            <TabItem Header="{x:Static p:Resources.Incomings}">
+                <StackPanel Orientation="Vertical">
+                    <Label FontWeight="Bold" Content="{Binding IncomingHeading, UpdateSourceTrigger=PropertyChanged}" />
+                    <chart:PieChart Background="Transparent" ChartTitleVisibility="Collapsed" FontSize="10"
+                                    Foreground="#000000" Palette="{StaticResource CustomColors}"
+                                    SelectedBrush="Transparent" Style="{StaticResource ChartStyle}"
+                                    ToolTipFormat="{}{0}: {1}">
+                        <chart:PieChart.Series>
+                            <chart:ChartSeries SeriesTitle="Incoming" DisplayMember="Group" ValueMember="Quantity"
+                                               ItemsSource="{Binding IncomingChartData, UpdateSourceTrigger=PropertyChanged}" />
+                        </chart:PieChart.Series>
+                    </chart:PieChart>
+                </StackPanel>
+            </TabItem>
+            <!-- Diagramm für Saldo -->
+            <TabItem Header="{x:Static p:Resources.HeaderBalance}">
+                <StackPanel Orientation="Vertical">
+                    <Label FontWeight="Bold" Content="{Binding BalanceHeading, UpdateSourceTrigger=PropertyChanged}" />
+                    <chart:PieChart Background="Transparent" ChartTitleVisibility="Collapsed" FontSize="10"
+                                    Foreground="#000000" Palette="{StaticResource CustomColors}"
+                                    SelectedBrush="Transparent" Style="{StaticResource ChartStyle}"
+                                    ToolTipFormat="{}{0}: {1}">
+                        <chart:PieChart.Series>
+                            <chart:ChartSeries SeriesTitle="Balance" DisplayMember="Group" ValueMember="Quantity"
+                                               ItemsSource="{Binding BalanceChartData, UpdateSourceTrigger=PropertyChanged}" />
+                        </chart:PieChart.Series>
+                    </chart:PieChart>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <Grid Grid.Row="2" Margin="10,5,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <RadioButton Grid.Column="0" Content="{x:Static p:Resources.AnalysesShowPercent}" Margin="0,0,5,0"
+                         IsChecked="{Binding ViewInPercent, UpdateSourceTrigger=PropertyChanged}" />
+            <RadioButton Grid.Column="1" Content="{x:Static p:Resources.AnalysesShowCurrency}" Margin="5,0,0,0"
+                         IsChecked="{Binding ViewInCurrencyUnits, UpdateSourceTrigger=PropertyChanged}" />
+            <Button Grid.Column="3" Content="{x:Static p:Resources.ButtonClose}" Width="75" Margin="5,0,0,0"
+                    IsCancel="True" />
+        </Grid>
+    </Grid>
+</Window>
