@@ -6,6 +6,6 @@ It supports storing incomes and expenses grouped by categories, graphical analyz
 ## Installation
 Setup can be downloaded from [here](http://www.schdav.de/haushaltsbuch/haushaltsbuch_131.exe)
 ### Checksum
-MD5: 5B6525616CED01D6246C5872074D5239
+MD5: `5B6525616CED01D6246C5872074D5239`
 
-SHA-1: A088BA5BAB0168DB6EBCA5145254336CC6432F7A
+SHA-1: `A088BA5BAB0168DB6EBCA5145254336CC6432F7A`
