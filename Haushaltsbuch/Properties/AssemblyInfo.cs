@@ -11,8 +11,8 @@ using System.Windows;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Haushaltsbuch 1.3.1")]
-[assembly: AssemblyCopyright("Copyright © 2016 David Schneider")]
+[assembly: AssemblyProduct("Haushaltsbuch 1.3.2")]
+[assembly: AssemblyCopyright("Copyright © 2018 David Schneider")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,8 +32,8 @@ using System.Windows;
 // Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.3.1.0")]
-[assembly: AssemblyFileVersion("1.3.1.0")]
+[assembly: AssemblyVersion("1.3.2.0")]
+[assembly: AssemblyFileVersion("1.3.2.0")]
 [assembly: CLSCompliant(true)]
 [assembly: NeutralResourcesLanguage("de-DE")]
 [assembly: Guid("4BA0EEA0-DFF6-4C34-96E2-25279ABA61ED")]

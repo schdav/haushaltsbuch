@@ -23,7 +23,7 @@
             <Label Content="{x:Static p:Resources.LabelMail}" />
             <TextBlock VerticalAlignment="Center">
                 <Hyperlink TextDecorations="{x:Null}" Command="{Binding OpenSchdavHyperlinkCommand}">
-                    info@schdav-dev.com
+                    info@schdav.de
                 </Hyperlink>
             </TextBlock>
         </StackPanel>

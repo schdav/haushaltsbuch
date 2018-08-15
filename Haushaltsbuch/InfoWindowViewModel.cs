@@ -93,7 +93,7 @@ namespace Haushaltsbuch
         {
             Hyperlink schdavHyperlink = new Hyperlink
             {
-                NavigateUri = new Uri("mailto:info@schdav-dev.com")
+                NavigateUri = new Uri("mailto:info@schdav.de")
             };
             Process.Start(schdavHyperlink.NavigateUri.ToString());
         }
