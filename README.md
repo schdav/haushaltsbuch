@@ -9,8 +9,10 @@ It supports storing incomes and expenses grouped by categories, graphical analyz
 ## Requirements
 .NET Framework 4.5 or greater
 ## Installation
-Setup can be downloaded from [here](https://www.schdav.de/haushaltsbuch/haushaltsbuch_131.exe)
+Setup can be downloaded from [here](https://www.schdav.de/haushaltsbuch/haushaltsbuch_132.exe)
 ### Checksum
-MD5: `5B6525616CED01D6246C5872074D5239`
+MD5: `1ed0879f40a5eb5ffd559acf28afe76e`
 
-SHA-1: `A088BA5BAB0168DB6EBCA5145254336CC6432F7A`
+SHA-1: `bcd1ee274b3772bef3c26cbd5ebb6801101ede83`
+
+SHA-256: `ab4e566e09a3140c02f86e7a76d049d5f28bf587e0a7676790243e97bcb18aac`
